@@ -84,6 +84,7 @@ const Carousel = createReactClass({
     vertical: PropTypes.bool,
     width: PropTypes.string,
     wrapAround: PropTypes.bool,
+    heightIndex: PropTypes.number,
   },
 
   getDefaultProps() {
@@ -110,6 +111,7 @@ const Carousel = createReactClass({
       vertical: false,
       width: '100%',
       wrapAround: false,
+      heightIndex: 0,
     };
   },
 
@@ -785,7 +787,7 @@ const Carousel = createReactClass({
       firstSlide.style.height = 'auto';
       slideHeight = this.props.vertical
         ? firstSlide.offsetHeight * props.slidesToShow
-        : firstSlide.offsetHeight;
+        : frame.childNodes[0].childNodes[heightIndex].offsetHeight;
     } else {
       slideHeight = 100;
     }
