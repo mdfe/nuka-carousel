@@ -1,5 +1,5 @@
 {
-  "name": "nuka-carousel",
+  "name": "@mdfe/nuka-carousel",
   "version": "3.0.0",
   "description": "Pure React Carousel",
   "main": "index.js",
